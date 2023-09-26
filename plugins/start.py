@@ -16,7 +16,41 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
 
+app = pyrogram.Client("my_bot")
 
+
+
+CHANNELS_TO_JOIN = ['channel_1', 'channel_2', 'channel_3']
+
+
+
+@app.on_message(filters.command('start'))
+
+async def start(client, message):
+
+  user = message.from_user
+
+  user_id = user.id
+
+
+
+  # Check if user is already subscribed to all channels
+
+  is_subscribed = all([channel in client.get_chat_members(message.chat.id, user_id) for channel in CHANNELS_TO_JOIN])
+
+  if not is_subscribed:
+
+    # If not, force user to subscribe to all channels
+
+    for channel in CHANNELS_TO_JOIN:
+
+      await client.add_chat_member(channel, user_id)
+
+    await message.reply_text('You have been subscribed to all channels.')
+
+  else:
+
+    await message.reply_text('You are already subscribed to all channels.')
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
