@@ -32,8 +32,23 @@ async def start_command(client: Client, message: Message):
                  InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel}")
                  ]]
                 )
+            )
+            return
+force_channel_1 = "EminenceinShadowDub"
+
+@Bot.on_message(filters.command('start') & filters.private & subscribed)
+async def start_command(client: Client, message: Message):
+     if force_channel: 
+        try:
+            user = await client.get_chat_member(force_channel_1, message.from_user.id)
+            if user.status =="kicked out":
+                await message.reply_text("Your are banned")
+                return
+        except UserNotParticipant:
+            await message.reply_text(
+                text="You are not Subscribed to @animecolony",
                 reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Try Again", url = f"https://t.me/{client.username}?start={message.command[1]}")
+                 InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel}")
                  ]]
                 )
             )
