@@ -42,7 +42,7 @@ async def start_command(client: Client, message: Message):
             if user.status =="kicked out":
                 await message.reply_text("Your are banned")
                 return
-               except UserNotParticipant:
+        except UserNotParticipant:
             await message.reply_text(
                 text="You are not Subscribed to @EminenceinShadowDub",
                 reply_markup= InlineKeyboardMarkup(  [[
