@@ -1,8 +1,6 @@
 #(©)CodeXBotz
 
 
-
-
 import os
 import asyncio
 from pyrogram import Client, filters, __version__
@@ -44,7 +42,7 @@ async def start_command(client: Client, message: Message):
             if user.status =="kicked out":
                 await message.reply_text("Your are banned")
                 return
-        except UserNotParticipant:
+               except UserNotParticipant:
             await message.reply_text(
                 text="You are not Subscribed to @EminenceinShadowDub",
                 reply_markup= InlineKeyboardMarkup(  [[
@@ -53,8 +51,7 @@ async def start_command(client: Client, message: Message):
                 )
             )
             return       
-    id = message.from_user.id
-    if not await present_user(id):
+   if not await present_user(id):
         try:
             await add_user(id)
         except:
