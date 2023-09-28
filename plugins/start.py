@@ -32,7 +32,6 @@ async def start_command(client: Client, message: Message):
                 )
             )
             return
-force_channel_1 = "EminenceinShadowDub"
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
@@ -50,8 +49,8 @@ async def start_command(client: Client, message: Message):
                  ]]
                 )
             )
-            return
-               id = message.from_user.id          
+                return
+     id = message.from_user.id          
      if not await present_user(id):
           try:
               await add_user(id)
