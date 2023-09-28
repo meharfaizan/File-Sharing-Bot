@@ -23,7 +23,7 @@ async def start_command(client: Client, message: Message):
     if force_channel: 
         try:
             user = await bot.get_chat_member(force_channel, Message.from_user.id)
-            if user.status =="kicked out"
+            if user.status =="kicked out":
                 await Message.reply_text("Your are banned")
                 return
         except UserNotParticipant:
