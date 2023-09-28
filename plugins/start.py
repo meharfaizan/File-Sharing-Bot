@@ -33,7 +33,7 @@ async def start_command(client: Client, message: Message):
                  ]]
                 )
                 reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Try Again", url = f"https://t.me/{client.username}?start={message.command[1]})
+                 InlineKeyboardButton("Try Again", url = f"https://t.me/{client.username}?start={message.command[1]}")
                  ]]
                 )
             )
