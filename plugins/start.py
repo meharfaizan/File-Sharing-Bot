@@ -46,14 +46,13 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to @animecolony",
+                text="You are not Subscribed to @EminenceinShadowDub",
                 reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel}")
+                 InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel_1}")
                  ]]
                 )
             )
-            return
-            
+            return       
     id = message.from_user.id
     if not await present_user(id):
         try:
