@@ -22,12 +22,12 @@ force_channel = "animecolony"
 async def start_command(client: Client, message: Message):
     if force_channel: 
         try:
-            user = await bot.get_chat_member(force_channel, message.from_user.id)
+            user = await bot.get_chat_member(force_channel, Message.from_user.id)
             if user.status =="kicked out"
-                await message.reply_text("Your are banned")
+                await Message.reply_text("Your are banned")
                 return
         except UserNotParticipant:
-            await message.reply_text(
+            await Message.reply_text(
                 text="You are not Subscribed to @animecolony",
                 reply_markup=Inline = InlineKeyboardMarkup(  [[
                  InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel}")
