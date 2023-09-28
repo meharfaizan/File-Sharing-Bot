@@ -32,7 +32,7 @@ async def start_command(client: Client, message: Message):
                  InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel}")
                  ]]
                 )
-                try:
+                await:
         buttons.append(
             [
                 InlineKeyboardButton(
