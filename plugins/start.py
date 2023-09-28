@@ -54,6 +54,7 @@ async def start_command(client: Client, message: Message):
      if not await present_user(id):
           try:
               await add_user(id)
+     try:         
      except:
           pass
     text = message.text
