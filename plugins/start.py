@@ -16,13 +16,12 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
 force_channel = "animecolony"
-bot = pyrogram.Client("my_bot")
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     if force_channel: 
         try:
-            user = await bot.get_chat_member(force_channel, Message.from_user.id)
+            user = await client.get_chat_member(force_channel, Message.from_user.id)
             if user.status =="kicked out":
                 await Message.reply_text("Your are banned")
                 return
