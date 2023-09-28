@@ -19,7 +19,7 @@ force_channel = "animecolony"
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
-    if force_channel: 
+     if force_channel: 
         try:
             user = await client.get_chat_member(force_channel, message.from_user.id)
             if user.status =="kicked out":
@@ -32,6 +32,7 @@ async def start_command(client: Client, message: Message):
                  InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel}")
                  ]]
                 )
+            )
                  buttons.append(
             [
                 InlineKeyboardButton(
