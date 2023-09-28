@@ -29,7 +29,7 @@ async def start_command(client: Client, message: Message):
         except UserNotParticipant:
             await Message.reply_text(
                 text="You are not Subscribed to @animecolony",
-                reply_markup= Inline = InlineKeyboardMarkup(  [[
+                reply_markup= Inline == InlineKeyboardMarkup(  [[
                  InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel}")
                  ]]
                 )
