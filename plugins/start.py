@@ -17,12 +17,12 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
 
-sub_channel ="masamunekunsrevengex"
+FORCE_SUB_CHANNEL_IDS = ["-1001648020195", "-1001817814382", "-1001736541339"]
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
-    if sub_channel: 
+    for force_sub_channel_id in FORCE_SUB_CHANNEL_IDS:
         try:
-            user = await client.get_chat_member(sub_channel, message.from_user.id)
+            user = await client.get_chat_member(force_sub_channel_id, message.from_user.id)
             if user.status =="kicked out":
                 await message.reply_text("Your are banned")
                 return
@@ -30,7 +30,7 @@ async def start_command(client: Client, message: Message):
             await message.reply_text(
                 text="You are not Subscribed to @EminenceinShadowDub",
                 reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel}")
+                 InlineKeyboardButton("Update Channel", url=f"t.me/{force_sub_channel_id}")
                  ]]
                 )
             )
