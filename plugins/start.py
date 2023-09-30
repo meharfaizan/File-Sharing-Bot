@@ -30,7 +30,7 @@ async def start_command(client: Client, message: Message):
             await message.reply_text(
                 text="You are not Subscribed to @EminenceinShadowDub",
                 reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Update Channel", url=f"t.me/{FORCE_SUB_CHANNEL_IDS")
+                 InlineKeyboardButton("Update Channel", url=f"t.me/{FORCE_SUB_CHANNEL_IDS}")
                  ]]
                 )
             )
