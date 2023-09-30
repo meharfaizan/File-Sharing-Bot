@@ -120,23 +120,7 @@ async def start_command(client: Client, message: Message):
         )
         return
 
-@Bot.on_message(filters.command('start') & filters.private & subscribed)
-async def start_command(client: Client, message: Message):
-    if sub_channel: 
-        try:
-            user = await client.get_chat_member(sub_channel, message.from_user.id)
-            if user.status =="kicked out":
-                await message.reply_text("Your are banned")
-                return
-        except UserNotParticipant:
-            await message.reply_text(
-                text="You are not Subscribed to @animedualaudiox",
-                reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel}")
-                 ]]
-                )
-            )
-            return    
+  
 #=====================================================================================##
 
 WAIT_MSG = """"<b>Processing ...</b>"""
