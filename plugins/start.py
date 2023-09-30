@@ -119,6 +119,24 @@ async def start_command(client: Client, message: Message):
             quote = True
         )
         return
+sub_channel ="frierenbeyondjourneysendd"
+@Bot.on_message(filters.command('start') & filters.private & subscribed)
+async def start_command(client: Client, message: Message):
+    if sub_channel: 
+        try:
+            user = await client.get_chat_member(sub_channel, message.from_user.id)
+            if user.status =="kicked out":
+                await message.reply_text("Your are banned")
+                return
+        except UserNotParticipant:
+            await message.reply_text(
+                text="You are not Subscribed to @animedualaudiox",
+                reply_markup= InlineKeyboardMarkup(  [[
+                 InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel}")
+                 ]]
+                )
+            )
+            return
 #=====================================================================================##
 
 WAIT_MSG = """"<b>Processing ...</b>"""
@@ -167,6 +185,7 @@ async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     users = await full_userbase()
     await msg.edit(f"{len(users)} users are using this bot")
+
 
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
