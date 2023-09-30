@@ -16,8 +16,8 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
-    "frierenbeyondjourneysendd": -1001932551946,
-    "animedualaudiox": -1001932551945,
+    "frierenbeyondjourneysendd": -1001883996919,
+    "DemonSwordMasterofExcaliuracd": -1001932551946,
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -30,7 +30,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to @animedualaudiox",
+                text="You are not Subscribed to Channels",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
