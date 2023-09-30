@@ -7,7 +7,6 @@ from pyrogram import Client, filters, __version__
 from pyrogram.enums import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated, UserNotParticipant
-force_channel_1 = "DemonSwordMasterofExcaliuracd"
 
 from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
@@ -16,23 +15,34 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 
 
-@Bot.on_message(filters.command('start') & filters.private & subscribed)
-async def start_command(client: Client, message: Message):
-    if force_channel_1: 
-        try:
-            user = await client.get_chat_member(force_channel_1, message.from_user.id)
-            if user.status =="kicked out":
-                await message.reply_text("Your are banned")
-                return
-        except UserNotParticipant:
-            await message.reply_text(
-                text="You are not Subscribed to @EminenceinShadowDub",
-                reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Update Channel", url=f"t.me/{force_channel_1}")
-                 ]]
-                )
-            )
+import pyrogram
+
+# Define the channel ID
+CHANNEL_ID = "-1001932551946"
+
+# Create a client
+client = pyrogram.Client()
+
+# Add a handler for the /start command
+@client.on_message(filters.command('start') & filters.private)
+async def start_command(client: pyrogram.Client, message: pyrogram.Message):
+    # Check if the user is subscribed to the channel
+    try:
+        user_member = await client.get_chat_member(CHANNEL_ID, message.from_user.id)
+        if user_member.status == "member":
+            # The user is subscribed to the channel
+            await message.reply_text("You are already subscribed to the channel.")
             return
+    except pyrogram.errors.exceptions.bad_request_400.UserNotParticipant:
+        # The user is not subscribed to the channel
+
+        # Create a channel button
+        channel_button = pyrogram.types.InlineKeyboardButton(text="Subscribe to Channel", url=f"t.me/{CHANNEL_ID}")
+        keyboard = pyrogram.types.InlineKeyboardMarkup([[channel_button]])
+
+        # Send a message to the user informing them that they need to subscribe to the channel
+        await message.reply_text("You need to subscribe to the channel before you can use this bot.", reply_markup=keyboard)
+        return
     id = message.from_user.id
     if not await present_user(id):
         try:
