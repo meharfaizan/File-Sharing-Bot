@@ -18,6 +18,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 FORCE_SUB_CHANNEL_IDS = {
     "channel": "frierenbeyondjourneysendd",
     "channel2": "DemonSwordMasterofExcaliuracd",
+    "channel3": "aplaythroughofacertainDudevrmmo",
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
