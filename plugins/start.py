@@ -14,9 +14,6 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
 
-
-import pyrogram
-
 # Define the channel ID
 CHANNEL_ID = "-1001932551946"
 
