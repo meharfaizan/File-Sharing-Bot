@@ -21,7 +21,7 @@ import pyrogram
 CHANNEL_ID = "-1001932551946"
 
 # Create a client
-client = pyrogram.Client()
+client = pyrogram.Client("namers")
 
 # Add a handler for the /start command
 @client.on_message(filters.command('start') & filters.private)
