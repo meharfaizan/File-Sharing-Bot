@@ -7,8 +7,8 @@ from pyrogram import Client, filters, __version__
 from pyrogram.enums import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated, UserNotParticipant
-force_channel_1 ="DemonSwordMasterofExcaliuracd"
-sub_channel ="frierenbeyondjourneysendd"
+force_channel_1 = "DemonSwordMasterofExcaliuracd"
+
 from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
 from helper_func import subscribed, encode, decode, get_messages
@@ -119,6 +119,7 @@ async def start_command(client: Client, message: Message):
             quote = True
         )
         return
+sub_channel ="frierenbeyondjourneysendd"
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     if sub_channel: 
