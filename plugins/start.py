@@ -39,7 +39,7 @@ async def start_command(client: Client, message: Message):
             return
 
     # Add your three channel IDs here
-    channel_ids = ["-1001736541339", "-1001817814382", "-1001560385250"]
+    channel_ids = ["-1736541339", "-1817814382", "-1560385250"]
     not_subscribed_channels = []
 
     for channel_id in channel_ids:
