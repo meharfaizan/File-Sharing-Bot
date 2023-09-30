@@ -22,7 +22,7 @@ async def start_command(client: Client, message: Message):
     if force_sub:
         try:
             user = await client.get_chat_member(force_sub, message.from_user.id)
-            if user.status == "kicked out":
+            if user.status == 'kicked out':
                 await message.reply_text("You are banned")
                 return
         except UserNotParticipant:
@@ -31,17 +31,33 @@ async def start_command(client: Client, message: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Channel 1", url="t.me/channel1"),
-                            InlineKeyboardButton("Channel 2", url="t.me/channel2"),
-                            InlineKeyboardButton("Channel 3", url="t.me/channel3"),
-                        ],
-                        [
-                            InlineKeyboardButton("Update Channel", url=f"t.me/{force_sub}"),
-                        ],
+                            InlineKeyboardButton("Update Channel", url=f"t.me/{force_sub}")
+                        ]
                     ]
                 ),
             )
             return
+
+    # Add your three channel IDs here
+    channel_ids = ["-1001736541339", "-1001817814382", "-1001560385250"]
+    not_subscribed_channels = []
+
+    for channel_id in channel_ids:
+        try:
+            user = await client.get_chat_member(channel_id, message.from_user.id)
+        except UserNotParticipant:
+            not_subscribed_channels.append(channel_id)
+
+    if not_subscribed_channels:
+        buttons = []
+        for channel_id in not_subscribed_channels:
+            buttons.append(InlineKeyboardButton("Subscribe", url=f"t.me/{channel_id}"))
+
+        await message.reply_text(
+            text="You are not subscribed to the following channels:",
+            reply_markup=InlineKeyboardMarkup([buttons]),
+        )
+        return
     id = message.from_user.id
     if not await present_user(id):
         try:
