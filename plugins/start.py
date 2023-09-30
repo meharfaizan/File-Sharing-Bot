@@ -16,8 +16,8 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
-    "frierenbeyondjourneysendd": -1001883996919,
-    "DemonSwordMasterofExcaliuracd": -1001932551946,
+    "channel": "frierenbeyondjourneysendd",
+    "channel2": "DemonSwordMasterofExcaliuracd",
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
