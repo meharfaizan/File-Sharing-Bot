@@ -180,7 +180,7 @@ async def not_joined(client: Client, message: Message):
         quote = True,
         disable_web_page_preview = True
     )
-sub_channel="masamunekunsrevengex"
+force_sub="masamunekunsrevengex"
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     if force_sub:
