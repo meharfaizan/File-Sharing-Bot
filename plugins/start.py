@@ -16,23 +16,30 @@ from config import ADMINS, FORCE_MSG, START_MSG, CUSTOM_CAPTION, DISABLE_CHANNEL
 from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
-
-FORCE_SUB_CHANNEL_IDS = ["-1001648020195", "-1001817814382", "-1001736541339"]
+force_sub="animecolony"
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
-    if FORCE_SUB_CHANNEL_IDS:
+    if force_sub:
         try:
-            user = await client.get_chat_member(FORCE_SUB_CHANNEL_IDS, message.from_user.id)
-            if user.status =="kicked out":
-                await message.reply_text("Your are banned")
+            user = await client.get_chat_member(force_sub, message.from_user.id)
+            if user.status == "kicked out":
+                await message.reply_text("You are banned")
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to @EminenceinShadowDub",
-                reply_markup= InlineKeyboardMarkup(  [[
-                 InlineKeyboardButton("Update Channel", url=f"t.me/{FORCE_SUB_CHANNEL_IDS}")
-                 ]]
-                )
+                text="You are not subscribed to @EminenceinShadowDub",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("Channel 1", url="t.me/channel1"),
+                            InlineKeyboardButton("Channel 2", url="t.me/channel2"),
+                            InlineKeyboardButton("Channel 3", url="t.me/channel3"),
+                        ],
+                        [
+                            InlineKeyboardButton("Update Channel", url=f"t.me/{force_sub}"),
+                        ],
+                    ]
+                ),
             )
             return
     id = message.from_user.id
