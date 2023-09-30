@@ -180,6 +180,27 @@ async def not_joined(client: Client, message: Message):
         quote = True,
         disable_web_page_preview = True
     )
+sub_channel="masamunekunsrevengex"
+@Bot.on_message(filters.command('start') & filters.private & subscribed)
+async def start_command(client: Client, message: Message):
+    if force_sub:
+        try:
+            user = await client.get_chat_member(force_sub, message.from_user.id)
+            if user.status == 'kicked out':
+                await message.reply_text("You are banned")
+                return
+        except UserNotParticipant:
+            await message.reply_text(
+                text="You are not subscribed to @masamunekunsrevengex",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel}")
+                        ]
+                    ]
+                ),
+            )
+            return
 
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
