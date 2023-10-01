@@ -35,7 +35,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to these Channels @EminenceinShadowDub    @Dspyxfamilydualaudio480p   @AnimeColony @The_Kingdoms_of_RuinDub",
+                text="You are not Subscribed to these Channels @EminenceinShadowDub    @spyxfamilydualaudio480p   @AnimeColony @The_Kingdoms_of_RuinDub",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
