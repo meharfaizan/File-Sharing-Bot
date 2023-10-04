@@ -20,6 +20,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel2": "DemonSwordMasterofExcaliuracd",
     "channel3": "aplaythroughofacertainDudevrmmo",
     "channel4": "berserkofgluttonyD",
+    "channel5": "frierenbeyondjourneysend1"
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
