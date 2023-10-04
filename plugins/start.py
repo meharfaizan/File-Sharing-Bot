@@ -23,6 +23,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel2": "The_Kingdoms_of_RuinDub",
     "channel3": "spyxfamilydualaudio480p",
     "channel4": "EminenceinShadowDub",
+    "channel4": "tokyorevengers1dub",
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
