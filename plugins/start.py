@@ -23,7 +23,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel2": "The_Kingdoms_of_RuinDub",
     "channel3": "spyxfamilydualaudio480p",
     "channel4": "EminenceinShadowDub",
-    "channel4": "tokyorevengers1dub",
+    "channel4": "ShangriLaFrontie",
     "channel5": "risingofshieldheroseason2dual",
 }
 # Add a handler for the /start command
@@ -37,7 +37,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to these Channels @EminenceinShadowDub @risingofshieldheroseason2dual   @spyxfamilydualaudio480p   @AnimeColony @The_Kingdoms_of_RuinDub",
+                text="You are not Subscribed to these Channels @EminenceinShadowDub @risingofshieldheroseason2dual @ShangriLaFrontie   @spyxfamilydualaudio480p  @AnimeColony @The_Kingdoms_of_RuinDub",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
