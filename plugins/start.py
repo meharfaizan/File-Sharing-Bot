@@ -16,9 +16,9 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
-    "channel": "RagnaCrimsonD",
+    "channel": "the100Girlfriendswhoreallyloveyd",
     "channel2": "DemonSwordMasterofExcaliuracd",
-    "channel3": "aplaythroughofacertainDudevrmmo",
+    "channel3": "A_Returners_Magic_SpecialD",
     "channel4": "berserkofgluttonyD",
     "channel5": "frierenbeyondjourneysend1",
     "channel6": "animedualaudiozippercartoonist",
@@ -34,7 +34,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to these Channels @aplaythroughofacertainDudevrmmo    @DemonSwordMasterofExcaliuracd   @frierenbeyondjourneysendd",
+                text="You are not Subscribed to these Channels @the100Girlfriendswhoreallyloveyd   @DemonSwordMasterofExcaliuracd   @frierenbeyondjourneysendd  @A_Returners_Magic_SpecialD",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
