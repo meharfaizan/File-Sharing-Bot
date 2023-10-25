@@ -20,10 +20,10 @@ from database.database import add_user, del_user, full_userbase, present_user
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
     "channel": "AnimeColony",
-    "channel2": "GoblinSlayerdub",
+    "channel2": "TheApothecaryDiariesdub",
     "channel3": "imGivingthedisgracedNobleladydub",
     "channel4": "EminenceinShadowDub",
-    "channel4": "ShangriLaFrontie",
+    "channel4": "RurouniKenshin2023dub",
     "channel5": "risingofshieldheroseason2dual",
 }
 # Add a handler for the /start command
@@ -37,7 +37,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to these Channels @EminenceinShadowDub @risingofshieldheroseason2dual @ShangriLaFrontie   @imGivingthedisgracedNobleladydub  @AnimeColony @GoblinSlayerdub ",
+                text="You are not Subscribed to these Channels @EminenceinShadowDub @risingofshieldheroseason2dual @RurouniKenshin2023dub   @imGivingthedisgracedNobleladydub  @AnimeColony @TheApothecaryDiariesdub ",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
