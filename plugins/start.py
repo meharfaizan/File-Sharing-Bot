@@ -19,13 +19,15 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
-    "channel": "AnimeColony",
-    "channel2": "TheApothecaryDiariesdub",
-    "channel3": "imGivingthedisgracedNobleladydub",
+    # "channel": "AnimeColony",
+   # "channel2": "TheApothecaryDiariesdub",
+#    "channel3": "imGivingthedisgracedNobleladydub",
+    "channel25": "YouWereExperiencedIWasNotdub",
+    "channel33": "deadmountdeathplayDub",
     "channel4": "EminenceinShadowDub",
-    "channe24": "RurouniKenshin2023dub",
+  #  "channe24": "RurouniKenshin2023dub",
    # "channel7": "plutoanimedub",
-    "channel5": "risingofshieldheroseason2dual",
+ #   "channel5": "risingofshieldheroseason2dual",
     "channel9": "attackontitanseasonsdub",
 }
 # Add a handler for the /start command
