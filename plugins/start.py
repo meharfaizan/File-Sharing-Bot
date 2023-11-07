@@ -16,11 +16,11 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
-    "channel": "the100Girlfriendswhoreallyloveyd",
+  #  "channel": "the100Girlfriendswhoreallyloveyd",
     "channel2": "DemonSwordMasterofExcaliuracd",
-    "channel3": "A_Returners_Magic_SpecialD",
-    "channel4": "berserkofgluttonyD",
-    "channel5": "frierenbeyondjourneysend1",
+   # "channel3": "A_Returners_Magic_SpecialD",
+  #  "channel4": "berserkofgluttonyD",
+   # "channel5": "frierenbeyondjourneysend1",
     "channel6": "animedualaudiozippercartoonist",
 }
 # Add a handler for the /start command
