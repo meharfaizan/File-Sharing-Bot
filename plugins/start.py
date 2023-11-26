@@ -23,7 +23,7 @@ FORCE_SUB_CHANNEL_IDS = {
    # "channel2": "TheApothecaryDiariesdub",
 #    "channel3": "imGivingthedisgracedNobleladydub",
   #  "channel25": "YouWereExperiencedIWasNotdub",
-    "channel33": "https://t.me/+x9vC0YJT16liNmQ1",
+    "channel33": "+x9vC0YJT16liNmQ1",
     "channel4": "EminenceinShadowDub",
   #  "channe24": "RurouniKenshin2023dub",
    # "channel7": "plutoanimedub",
