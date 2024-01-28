@@ -23,12 +23,12 @@ FORCE_SUB_CHANNEL_IDS = {
    # "channel2": "TheApothecaryDiariesdub",
 #    "channel3": "imGivingthedisgracedNobleladydub",
   #  "channel25": "YouWereExperiencedIWasNotdub",
-    "channel33": "foolishangeldanceswithdevildub",
-    "channel4": "HokkaidoGalsAreSuperAdorabledub",
+    "channel33": "ASignofAffectiondub",
+    "channel4": "TalesofWeddingRingsDub",
   #  "channe24": "RurouniKenshin2023dub",
    # "channel7": "plutoanimedub",
  #   "channel5": "risingofshieldheroseason2dual",
-    "channel9": "ClassroomoftheEliteSeason2EngJap",
+    "channel9": "witchandthebeastdub",
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -41,7 +41,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to these Channels @HokkaidoGalsAreSuperAdorabledub @animecolony @foolishangeldanceswithdevildub @ClassroomoftheEliteSeason2EngJap ",
+                text="You are not Subscribed to these Channels @ASignofAffectiondub @animecolony @TalesofWeddingRingsDub @witchandthebeastdub ",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
