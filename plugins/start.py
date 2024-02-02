@@ -1,4 +1,4 @@
-#(©)CodeXBotz
+o#(©)CodeXBotz
 
 
 
@@ -23,8 +23,8 @@ FORCE_SUB_CHANNEL_IDS = {
    # "channel2": "TheApothecaryDiariesdub",
 #    "channel3": "imGivingthedisgracedNobleladydub",
   #  "channel25": "YouWereExperiencedIWasNotdub",
-    "channel33": "zom100dubbed",
-    "channel4": "TalesofWeddingRingsDub",
+    "channel33": "SasakiandPeepsdub",
+    "channel4": "DemonPrinceofMomochiHousedub",
   #  "channe24": "RurouniKenshin2023dub",
    # "channel7": "plutoanimedub",
  #   "channel5": "risingofshieldheroseason2dual",
