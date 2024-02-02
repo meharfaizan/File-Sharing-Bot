@@ -1,4 +1,4 @@
-o#(©)CodeXBotz
+#(©)CodeXBotz
 
 
 
@@ -41,7 +41,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to these Channels @zom100dubbed @animecolony @TalesofWeddingRingsDub @witchandthebeastdub ",
+                text="You are not Subscribed to these Channels @SasakiandPeepsdub @zom100dubbed @animecolony @DemonPrinceofMomochiHousedub @witchandthebeastdub ",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
