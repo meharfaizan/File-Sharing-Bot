@@ -24,7 +24,7 @@ FORCE_SUB_CHANNEL_IDS = {
 #    "channel3": "imGivingthedisgracedNobleladydub",
   #  "channel25": "YouWereExperiencedIWasNotdub",
     "channel33": "EminenceinShadowDub",
-    "channel4": "LaidBackCampdub",
+    "channel4": "ninjakamuidual",
   #  "channe24": "RurouniKenshin2023dub",
    # "channel7": "plutoanimedub",
  #   "channel5": "risingofshieldheroseason2dual",
