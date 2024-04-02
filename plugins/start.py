@@ -24,11 +24,11 @@ FORCE_SUB_CHANNEL_IDS = {
 #    "channel3": "imGivingthedisgracedNobleladydub",
   #  "channel25": "YouWereExperiencedIWasNotdub",
     "channel33": "EminenceinShadowDub",
-    "channel4": "ninjakamuidual",
+    "channel4": "ninjakamuidual"}
   #  "channe24": "RurouniKenshin2023dub",
    # "channel7": "plutoanimedub",
  #   "channel5": "risingofshieldheroseason2dual",
-   # "channel9": "FZXAnime"}
+   # "channel9": "FZXAnime"
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
