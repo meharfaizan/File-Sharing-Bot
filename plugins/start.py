@@ -23,8 +23,8 @@ FORCE_SUB_CHANNEL_IDS = {
    # "channel2": "TheApothecaryDiariesdub",
 #    "channel3": "imGivingthedisgracedNobleladydub",
   #  "channel25": "YouWereExperiencedIWasNotdub",
-    "channel33": "EminenceinShadowDub",
-    "channel4": "ReincarnatedasaSlimedub"}
+    "channel33": "AnArchdemonsDilemmadub",
+   # "channel4": "ReincarnatedasaSlimedub"}
   #  "channe24": "RurouniKenshin2023dub",
    # "channel7": "plutoanimedub",
  #   "channel5": "risingofshieldheroseason2dual",
