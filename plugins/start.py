@@ -17,11 +17,11 @@ from database.database import add_user, del_user, full_userbase, present_user
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
   #  "channel": "the100Girlfriendswhoreallyloveyd",
-    "channel2": "SengokuYoukoengdub",
-    "channel3": "BucchigiriAv1",
+    "channel2": "ReMonsterDub",
+   # "channel3": "BucchigiriAv1",
   #  "channel4": "berserkofgluttonyD",
    # "channel5": "frierenbeyondjourneysend1",
-    "channel6": "MeijiGekken1874dub",
+#    "channel6": "MeijiGekken1874dub",
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -34,7 +34,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="You are not Subscribed to these Channels @MeijiGekken1874dub  @SengokuYoukoengdub  @BucchigiriAv1 ",
+                text="You are not Subscribed to these Channels @ReMonsterDub ",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
