@@ -40,7 +40,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="Thanks for Joining ☺️ @animedualaudiozippercartoonist but You are not Subscribed to these Channels Join these channels and Support our Anime Channel and our Anime service Join 😀 these channels and Thans and Enjoy Watching Anime @EminenceinShadowDub_1 @animecolony @joblessreincarnationx @AlyaSometimesHidesHerFeelingsdub @MagicalGirlandtheEvilLieutenant1 @MyInstantDeathAbilityAv1 @unwantedundeadadventurer @TOWER_OF_GOD_Eng_Dub_1 ",
+                text="Thanks for Joining ☺️ @animedualaudiozippercartoonist but You are not Subscribed to these Channels Join these channels and Support our Anime Channel and our Anime service 😀 thanks and Enjoy Watching Anime @EminenceinShadowDub_1 @animecolony @joblessreincarnationx @AlyaSometimesHidesHerFeelingsdub @MagicalGirlandtheEvilLieutenant1 @MyInstantDeathAbilityAv1 @unwantedundeadadventurer @TOWER_OF_GOD_Eng_Dub_1 ",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
