@@ -19,7 +19,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
-    "channel": "animecolony",
+    "channel": "FZAnime",
     "channel2": "MyInstantDeathAbilityAv1",
     "channel3": "unwantedundeadadventurer",
   #  "channel25": "YouWereExperiencedIWasNotdub",
@@ -41,7 +41,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="Thanks for Joining ☺️ @animedualaudiozippercartoonist but You are not Subscribed to these Channels Join these channels and Support our Anime Channel and our Anime service 😀 thanks and Enjoy Watching Anime \n @EminenceinShadowDub_1 \n @animecolony \n @joblessreincarnationx \n @AlyaSometimesHidesHerFeelingsdub \n @MagicalGirlandtheEvilLieutenant1 \n @MyInstantDeathAbilityAv1 \n @unwantedundeadadventurer \n @TOWER_OF_GOD_Eng_Dub_1 ",
+                text="Thanks for Joining ☺️ @animedualaudiozippercartoonist but You are not Subscribed to these Channels Join these channels and Support our Anime Channel and our Anime service 😀 thanks and Enjoy Watching Anime \n @EminenceinShadowDub_1 \n @animecolony \n FZAnime \n @joblessreincarnationx \n @AlyaSometimesHidesHerFeelingsdub \n @MagicalGirlandtheEvilLieutenant1 \n @MyInstantDeathAbilityAv1 \n @unwantedundeadadventurer \n @TOWER_OF_GOD_Eng_Dub_1 ",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
