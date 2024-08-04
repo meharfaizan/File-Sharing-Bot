@@ -24,7 +24,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel3": "Ongoing_Paradox",
   #  "channel25": "YouWereExperiencedIWasNotdub",
     "channel33": "AlyaSometimesHidesHerFeelingsdub",
-    "channel24":  "TOWER_OF_GOD_Eng_Dub_1",
+    "channel24":  "TOWER_OF_GOD_Eng_Dub_1"}
 #    "channel4":  "MagicalGirlandtheEvilLieutenant1"}
   #  "channel224":  "TOWER_OF_GOD_Eng_Dub_1",
    # "channel7": "plutoanimedub",
