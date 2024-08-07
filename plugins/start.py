@@ -19,7 +19,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
-    "channel": "FZAnime",
+    "channel": "Animecolony",
 #    "channel2": "MyInstantDeathAbilityAv1",
     "channel3": "Ongoing_Paradox",
   #  "channel25": "YouWereExperiencedIWasNotdub",
