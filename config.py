@@ -35,7 +35,7 @@ for channel_id_str in channel_ids_str.split(","):
 
       print(f"Invalid channel ID: {channel_id_str}")
 
-  return CHANNEL_ID
+    return CHANNEL_ID
 
 
 ##OWNER ID
