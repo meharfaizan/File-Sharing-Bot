@@ -31,7 +31,7 @@ for channel_id_str in channel_ids_str.split(","):
 
       CHANNEL_ID.append(int(channel_id_str.strip()))
 
-     except ValueError:
+    except ValueError:
 
       print(f"Invalid channel ID: {channel_id_str}")
 
