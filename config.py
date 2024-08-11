@@ -22,18 +22,16 @@ API_HASH = os.environ.get("API_HASH", "")
 #CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
 
 """Retrieves channel IDs from the environment variable."""
+channel_ids_str = os.environ.get("CHANNEL_ID", "")
+CHANNEL_ID = [-1001729892476,-1002209106676]
 
-  channel_ids_str = os.environ.get("CHANNEL_ID", "")
+ for channel_id_str in channel_ids_str.split(","):
 
-  CHANNEL_ID = [-1001729892476,-1002209106676]
-
-  for channel_id_str in channel_ids_str.split(","):
-
-    try:
+     try:
 
       CHANNEL_ID.append(int(channel_id_str.strip()))
 
-    except ValueError:
+     except ValueError:
 
       print(f"Invalid channel ID: {channel_id_str}")
 
