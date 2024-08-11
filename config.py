@@ -39,7 +39,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "Hi 🖐 {first}\n\nI am private files store bot for @animedualaudiozippercartoonist Channel. Join All Channels then try again bot will send you files if you have any problem ask in main channel")
 try:
-    ADMINS=[]
+    ADMINS=[6040503076]
     for x in (os.environ.get("ADMINS", "").split()):
         ADMINS.append(int(x))
 except ValueError:
