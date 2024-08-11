@@ -19,8 +19,33 @@ APP_ID = int(os.environ.get("APP_ID", ""))
 API_HASH = os.environ.get("API_HASH", "")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+#CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
 
+def get_channel_ids():
+
+  """Retrieves channel IDs from the environment variable."""
+
+  channel_ids_str = os.environ.get("CHANNEL_IDS", "")
+
+  channel_ids = [-1001729892476,-1002209106676]
+
+  for channel_id_str in channel_ids_str.split(","):
+
+    try:
+
+      channel_ids.append(int(channel_id_str.strip()))
+
+    except ValueError:
+
+      print(f"Invalid channel ID: {channel_id_str}")
+
+  return channel_ids
+
+
+
+CHANNEL_IDS = get_
+
+channel_ids()
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
