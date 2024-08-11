@@ -38,7 +38,7 @@ for channel_id_str in channel_ids_str.split(","):
   return CHANNEL_ID
 
 
-#OWNER ID
+##OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 #Port
