@@ -21,7 +21,7 @@ API_HASH = os.environ.get("API_HASH", "")
 #Your db channel Id
 #CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
 
- """Retrieves channel IDs from the environment variable."""
+"""Retrieves channel IDs from the environment variable."""
 
   channel_ids_str = os.environ.get("CHANNEL_ID", "")
 
