@@ -25,9 +25,9 @@ API_HASH = os.environ.get("API_HASH", "")
 channel_ids_str = os.environ.get("CHANNEL_ID", "")
 CHANNEL_ID = [-1001729892476,-1002209106676]
 
- for channel_id_str in channel_ids_str.split(","):
+for channel_id_str in channel_ids_str.split(","):
 
-     try:
+    try:
 
       CHANNEL_ID.append(int(channel_id_str.strip()))
 
