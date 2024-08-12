@@ -1,35 +1,30 @@
 #(©)CodeXBotz
 
-
+#(©)CodeXBotz
 
 
 import os
 import asyncio
+import pyrogram
+from pyrogram.types import Message
 from pyrogram import Client, filters, __version__
 from pyrogram.enums import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated, UserNotParticipant
-force_channel_1 ="animecolony"
 
 from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
 from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
-
-
 # Define the channel IDs
 FORCE_SUB_CHANNEL_IDS = {
     "channel": "Animecolony",
-#    "channel2": "MyInstantDeathAbilityAv1",
-    "channel3": "Ongoing_Paradox",
-  #  "channel25": "YouWereExperiencedIWasNotdub",
-    "channel33": "AlyaSometimesHidesHerFeelingsdub",
-    "channel24":  "TOWER_OF_GOD_Eng_Dub_1"}
-#    "channel4":  "MagicalGirlandtheEvilLieutenant1"}
-  #  "channel224":  "TOWER_OF_GOD_Eng_Dub_1",
-   # "channel7": "plutoanimedub",
- #   "channel5": "risingofshieldheroseason2dual",
-   # "channel9": "" 
+    "channel2": "TOWER_OF_GOD_Eng_Dub_1",
+    "channel3": "AlyaSometimesHidesHerFeelingsdub",
+    "channel4": "Ongoing_Paradox",
+   # "channel5": "frierenbeyondjourneysend1",
+#    "channel6": "MeijiGekken1874dub",
+}
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
@@ -135,8 +130,6 @@ async def start_command(client: Client, message: Message):
             quote = True
         )
         return
-
-    
 #=====================================================================================##
 
 WAIT_MSG = """"<b>Processing ...</b>"""
@@ -144,7 +137,6 @@ WAIT_MSG = """"<b>Processing ...</b>"""
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
 
 #=====================================================================================##
-
     
     
 @Bot.on_message(filters.command('start') & filters.private)
@@ -186,6 +178,7 @@ async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     users = await full_userbase()
     await msg.edit(f"{len(users)} users are using this bot")
+
 
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
