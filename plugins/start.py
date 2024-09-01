@@ -20,7 +20,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 FORCE_SUB_CHANNEL_IDS = {
     "channel": "Animecolony",
   #  "channel2": "TOWER_OF_GOD_Eng_Dub_1",
-  #  "channel3": "AlyaSometimesHidesHerFeelingsdub",
+    "channel3": "Anime_Sensei_Network",
     "channel4": "Animedualaudiozippercartoonist",
    # "channel5": "frierenbeyondjourneysend1",
 #    "channel6": "MeijiGekken1874dub",
@@ -36,7 +36,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="Thanks for Joining ☺️ @animedualaudiozippercartoonist but You are not Subscribed to these Channels Join these channels and Support our Anime Channel and our Anime service 😀 thanks and Enjoy Watching Anime \n @Animedualaudiozippercartoonist \n @animecolony \n ",
+                text="Thanks for Joining ☺️ @animedualaudiozippercartoonist but You are not Subscribed to these Channels Join these channels and Support our Anime Channel and our Anime service 😀 thanks and Enjoy Watching Anime \n @Anime_Sensei_Network \n @Animedualaudiozippercartoonist \n @animecolony \n ",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
