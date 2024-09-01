@@ -20,7 +20,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 FORCE_SUB_CHANNEL_IDS = {
     "channel": "Animecolony",
   #  "channel2": "TOWER_OF_GOD_Eng_Dub_1",
-   # "channel3": "Anime_Sensei_Network",
+    "channel3": "Anime_Sensei_Network",
     "channel4": "Animedualaudiozippercartoonist",
    # "channel5": "frierenbeyondjourneysend1",
 #    "channel6": "MeijiGekken1874dub",
