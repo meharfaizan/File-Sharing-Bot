@@ -20,8 +20,8 @@ from database.database import add_user, del_user, full_userbase, present_user
 FORCE_SUB_CHANNEL_IDS = {
     "channel": "animecolony_1",
     "channel2": "arifureta_english_dubbed_1",
-    "channel3": "rezero_english_dubb",
-    "channel4": "lonerlifeinanotherworld_dub",
+ #   "channel3": "rezero_english_dubb",
+#    "channel4": "lonerlifeinanotherworld_dub",
     "channel5": "bluebox_engllish_dubbed",
 #    "channel6": "MeijiGekken1874dub",
 }
