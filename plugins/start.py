@@ -20,7 +20,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel2": "ongoingdubsubanime",
    # "channel3": "spiritchronicles_1",
     "channel4": "anidbs",
-    "channel5": "devilmaycryengdub",
+    "channel5": "lordofmysteries_01",
   #  "channel7": "rezero_english_dubb",
     "channel8": "cryptoontelegramminiapps",
   #  "channel9": "arifureta_english_dubbed_1",
