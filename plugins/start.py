@@ -21,9 +21,9 @@ FORCE_SUB_CHANNEL_IDS = {
    # "channel3": "spiritchronicles_1",
     "channel4": "anidbs",
     "channel5": "themodsnjbhvgiteeyhtheMods2025",
-  #  "channel7": "rezero_english_dubb",
+    "channel7": "PVCRYPTO0",
     "channel8": "megasforex",
-  #  "channel9": "arifureta_english_dubbed_1",
+   # "channel9": "arifureta_english_dubbed_1",
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -36,7 +36,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="Thanks for Joining ☺️ \n @animedualaudiozippercartoonist but You are not Subscribed to these Channels \n @themodsnjbhvgiteeyhtheMods2025 \n @megasforex \n @ongoingdubsubanime \n @spiritchronicles_1  \n @Animedualaudiozippercartoonist \n @devilmaycryengdub \n @anidbs",
+                text="Thanks for Joining ☺️ \n @animedualaudiozippercartoonist but You are not Subscribed to these Channels \n @PVCRYPTO0 \n @themodsnjbhvgiteeyhtheMods2025 \n @megasforex \n @ongoingdubsubanime \n @spiritchronicles_1  \n @Animedualaudiozippercartoonist \n @devilmaycryengdub \n @anidbs",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
