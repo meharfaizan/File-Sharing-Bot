@@ -22,7 +22,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel4": "anidbs",
     "channel5": "themodsnjbhvgiteeyhtheMods2025",
     "channel7": "PVCRYPTO0",
-    "channel8": "megasforex",
+ #   "channel8": "megasforex",
    # "channel9": "arifureta_english_dubbed_1",
 }
 # Add a handler for the /start command
