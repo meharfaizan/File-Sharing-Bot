@@ -23,7 +23,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel4": "anidbs",
     "channel5": "ParallelWorldPharmacydubx",
     "channel7": "oshinokoenglishdubbed",
-    "channel77": "jujutsukaisenseasonsdub",
+ #   "channel77": "jujutsukaisenseasonsdub",
     "channel92": "part_time_jobs_ok",
     "channel59": "JobFindHere",
     "channel8": "chainsawmandub480p720p",
