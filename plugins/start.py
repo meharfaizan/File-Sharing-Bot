@@ -18,16 +18,16 @@ from database.database import add_user, del_user, full_userbase, present_user
 FORCE_SUB_CHANNEL_IDS = {
     "channel": "Animedualaudiozippercartoonist",
     "channel2": "cryptoairdrophubtg",
-    "channe42": "DanDaDanSeasonsDub",
+    "channe42": "farminglifeinanotherworlddub",
     "channel3": "trustedbuyorsell",
     "channel4": "anidbs",
-    "channel5": "ParallelWorldPharmacydubx",
+    "channel5": "lordofmysteries_01",
     "channel7": "oshinokoenglishdubbed",
- #   "channel77": "jujutsukaisenseasonsdub",
+    "channel77": "fullmetalpanicdub",
     "channel92": "part_time_jobs_here",
     "channel59": "JobFindHere",
-    "channel8": "chainsawmandub480p720p",
-    "channel9": "WrongWaytoUseHealingMagicdub",
+    "channel8": "SkeletonKnightinAnotherWorldDual",
+    "channel9": "myisekailifeDub",
 }
 # Add a handler for the /start command
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -40,7 +40,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="Thanks for Joining ☺️ \n @animedualaudiozippercartoonist but You are not Subscribed to these Channels \n @part_time_jobs_here \n @JobFindHere \n @DanDaDanSeasonsDub \n @HellsParadisex \n @jujutsukaisenseasonsdub \n @oshinokoenglishdubbed \n @trustedbuyorsell \n @chainsawmandub480p720p \n @ParallelWorldPharmacydubx \n @WrongWaytoUseHealingMagicdub \n @cryptoairdrophubtg  \n @Animedualaudiozippercartoonist \n @anidbs",
+                text="Thanks for Joining ☺️ \n @animedualaudiozippercartoonist but You are not Subscribed to these Channels \n @part_time_jobs_here \n @JobFindHere \n @farminglifeinanotherworlddub \n @lordofmysteries_01 \n @oshinokoenglishdubbed \n @myisekailifeDub \n @trustedbuyorsell \n @SkeletonKnightinAnotherWorldDual \n @https://t.me/fullmetalpanicdub \n @WrongWaytoUseHealingMagicdub \n @cryptoairdrophubtg  \n @Animedualaudiozippercartoonist \n @anidbs",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
