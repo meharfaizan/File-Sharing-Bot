@@ -26,7 +26,7 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel77": "fullmetalpanicdub",
     "channel92": "part_time_jobs_here",
     "channel59": "JobFindHere",
-    "channel8": "SkeletonKnightinAnotherWorldDual",
+  #  "channel8": "SkeletonKnightinAnotherWorldDual",
     "channel9": "myisekailifeDub",
 }
 # Add a handler for the /start command
