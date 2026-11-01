@@ -19,13 +19,17 @@ FORCE_SUB_CHANNEL_IDS = {
     "channel": "Animedualaudiozippercartoonist",
    # "channel2": "cryptoairdrophubtg",
 #    "channe42": "farminglifeinanotherworlddub",
-    "channel3": "trustedbuyorsell",
+ #   "channel3": "trustedbuyorsell",
     "channel4": "anidbs",
    # "channel5": "lordofmysteries_01",
     "channel7": "oshinokoenglishdubbed",
     "channel77": "fullmetalpanicdub",
  #   "channel92": "part_time_jobs_here",
-    "channel59": "JobFindHere",
+  #  "channel59": "JobFindHere",
+    "channel29": "reincarnatedasaslimeenglishdubb",
+    "channel22": "theelusivesamuraidubx",
+    "channel20": "joblessreincarnationenglishdub1",
+    "channel37": "FireflyWedding_1",
   #  "channel8": "SkeletonKnightinAnotherWorldDual",
     "channel9": "myisekailifeDub",
 }
@@ -40,7 +44,7 @@ async def start_command(client: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_text(
-                text="Thanks for Joining ☺️ \n @animedualaudiozippercartoonist but You are not Subscribed to these Channels \n @JobFindHere \n @oshinokoenglishdubbed \n @myisekailifeDub \n @trustedbuyorsell \n @fullmetalpanicdub  \n @Animedualaudiozippercartoonist \n @anidbs",
+                text="Thanks for Joining ☺️ \n @animedualaudiozippercartoonist but You are not Subscribed to these Channels \n @reincarnatedasaslimeenglishdubb \n @oshinokoenglishdubbed \n @myisekailifeDub \n @theelusivesamuraidubx \n @fullmetalpanicdub  \n @Animedualaudiozippercartoonist \n @anidbs \n @joblessreincarnationenglishdub1 \n @FireflyWedding_1",
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton("Update Channel", url=f"t.me/{sub_channel_id}")
